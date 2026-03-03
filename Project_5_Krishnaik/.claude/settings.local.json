@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import json; nb=json.load\\(open\\(''multiaiagent_simple.ipynb''\\)\\); [print\\(i, c[''source''][:100] if c[''source''] else ''\\(empty\\)''\\) for i,c in enumerate\\(nb[''cells'']\\)]\")",
+      "Bash(python -c \"import json,sys; nb=json.load\\(sys.stdin\\); cells=nb[''cells'']; print\\(f''Total cells: {len\\(cells\\)}''\\); [print\\(f''Cell {i}: id={c[\"\"id\"\"]}, type={c[\"\"cell_type\"\"]}''\\) for i,c in enumerate\\(cells\\)]\")",
+      "Bash(python -c \"import json,sys; nb=json.load\\(sys.stdin\\); cell=nb[''cells''][11]; print\\(''SOURCE:''\\); print\\(''''.join\\(cell[''source'']\\)\\); print\\(''\\\\nOUTPUTS:''\\); [print\\(json.dumps\\(o, indent=2\\)\\) for o in cell.get\\(''outputs'',[]\\)]\")",
+      "Bash(python -c \"import json,sys; nb=json.load\\(sys.stdin\\); cell=nb[''cells''][10]; print\\(''''.join\\(cell[''source'']\\)\\)\")"
+    ]
+  }
+}
