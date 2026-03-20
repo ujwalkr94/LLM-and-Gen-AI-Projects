@@ -80,7 +80,7 @@ if user_input:
     with st.chat_message('user'):
         st.text(user_input)
 
-    #CONFIG = {'configurable': {'thread_id': st.session_state['thread_id']}}
+    # CONFIG = {'configurable': {'thread_id': st.session_state['thread_id']}}
 
     CONFIG = {
         "configurable": {"thread_id": st.session_state["thread_id"]},

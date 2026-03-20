@@ -37,4 +37,3 @@ def retrieve_all_threads():
 
     return list(all_threads)
 
-

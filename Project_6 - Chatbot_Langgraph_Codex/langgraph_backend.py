@@ -6,7 +6,7 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path=r"E:\Desktop\Data_Science\Gen_AI\.env")
 
 llm = ChatOpenAI()
 
@@ -27,3 +27,6 @@ graph.add_edge(START, "chat_node")
 graph.add_edge("chat_node", END)
 
 chatbot = graph.compile(checkpointer=checkpointer)
+
+
+
